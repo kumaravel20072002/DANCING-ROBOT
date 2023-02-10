@@ -1,0 +1,306 @@
+
+<head>
+
+<title>Dancing Robot</title>
+<style type="text/css">
+body{
+	background-color:black;
+}
+.body1{
+	display: flex;
+}
+.leg{
+
+	display: flex;
+}
+
+h1
+{
+	color: white;
+	text-align: center;
+}
+.robot{
+	height: 500px;
+	border:2px solid black;
+}
+.head{
+	width: 250px;
+	height: 150px;
+	background-color:blue;
+	margin:0 auto;
+	border-radius: 200px 200px 0 0;
+	margin-bottom: 10px;
+	transition: width 1s ease;
+}
+.robot:hover .head{
+	width: 300px;
+	animation:movehead 1s infinite;
+}
+@keyframes movehead{
+	0%{
+		width:250px;
+	}
+	25%{
+		width:300px;
+	}
+	50%{
+		width:350px;
+	}
+	75%{
+		width:300px;
+	}
+	100%{
+		width:250px;
+	}
+}
+
+.eye{
+	position: relative;
+	top:100px;
+}
+.lefteye{
+	background-color: black;
+	width: 20px;
+	height: 20px;
+	border-radius: 15px;
+	display: inline-block;
+	margin-left: 50px;
+	transition:transform 1s ease-in-out;
+}
+.robot:hover .lefteye{
+	transform: translateX(-30px);
+	animation: movelefteye 2s infinite;
+}
+@keyframes movelefteye{
+	0%{
+		transform: translateX(0px);
+	}
+	25%{
+		transform: translateX(-30px);
+	}
+	50%{
+		transform: translateX(0px);
+	}
+	75%{
+		transform: translateX(-30px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+.righteye{
+	background-color: black;
+	width: 20px;
+	height: 20px;
+	border-radius: 15px;
+	display: inline-block;
+	margin-left:110px ;
+	transition:transform 1s ease-in-out;
+}
+.robot:hover .righteye{
+	transform: translateX(-30px);
+	animation: moverighteye 2s infinite;
+}
+@keyframes moverighteye{
+	0%{
+		transform: translateX(0px);
+	}
+	25%{
+		transform: translateX(-30px);
+	}
+	50%{
+		transform: translateX(0px);
+	}
+	75%{
+		transform: translateX(-30px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+.center{
+	background-color: blue;
+	width: 250px;
+	height: 250px;
+	border-radius: 0 0 50px 50px;
+	margin:0 auto;
+	transition: all 1s ease-in-out;
+}
+.robot:hover .center{
+	transform: rotate(360deg);
+	animation: movecenter 2s infinite;
+}
+@keyframes movecenter{
+	from{
+		transform:rotate(0deg);
+	}
+	transform{
+		transform:rotate(360deg);
+	}
+
+}
+.leftarm{
+width: 50px ;
+height:175px ;
+border-radius: 20px;
+background-color: blue;
+margin-left:650px ;
+transition: transform is ease-in-out;
+}
+.robot:hover .leftarm{
+	transform: rotate(90deg);
+	animation: moveleftarm 2s infinite;
+}
+@keyframes moveleftarm{
+	0%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	25%{
+		transform:rotate(90deg);
+		transform-origin: top center;
+	}
+	50%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	75%{
+		transform:rotate(90deg);
+		transform-origin: top center;
+	}
+	100%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+}
+.rightarm{
+	width:50px ;
+	height:175px ;
+	background-color: blue;
+	border-radius: 20px;
+	margin-right: 650px;
+	transition: transform is ease-in-out;
+	}
+	.robot:hover .rightarm{
+	transform: rotate(90deg);
+	animation: moverightarm 2s infinite;
+}
+@keyframes moverightarm{
+	0%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	25%{
+		transform:rotate(-90deg);
+		transform-origin: top center;
+	}
+	50%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	75%{
+		transform:rotate(-90deg);
+		transform-origin: top center;
+	}
+	100%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+}
+.left{
+	height: 175px;
+	width: 50px;
+	background-color: blue;
+	border-radius: 20px;
+	margin-left:740px ;
+	transition: transform is ease-in-out;
+}
+.robot:hover .left{
+	transform: rotate(90deg);
+	animation: moverightarm 2s infinite;
+}
+@keyframes left{
+	0%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	25%{
+		transform:rotate(-90deg);
+		transform-origin: top center;
+	}
+	50%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	75%{
+		transform:rotate(-90deg);
+		transform-origin: top center;
+	}
+	100%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+}
+.right{
+	height: 175px;
+	width: 50px;
+	background-color: blue;
+	border-radius: 20px;
+	margin-left: 100px;
+	transition: transform is ease-in-out;
+}
+.robot:hover .right{
+	transform: rotate(90deg);
+	animation: moverightarm 2s infinite;
+}
+@keyframes right{
+	0%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	25%{
+		transform:rotate(-90deg);
+		transform-origin: top center;
+	}
+	50%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+	75%{
+		transform:rotate(-90deg);
+		transform-origin: top center;
+	}
+	100%{
+		transform:rotate(0deg);
+		transform-origin: top center;
+	}
+}
+</style>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Robot1.css">
+	<title></title>
+</head>
+<body>
+	<h1>Dancing Robot</h1>
+<div class=robot>
+	<div class="head">
+	<div class="eye">
+		<div class="lefteye"></div>
+		<div class="righteye"></div>
+		</div>
+		</div>
+	<div class="body1">
+		<div class="leftarm"></div>
+		<div class="center"></div>
+		<div class="rightarm"></div>
+		</div>
+	<div class="leg">
+		<div class="left"></div>
+		<div class="right"></div>
+		</div>
+</div>
+</body>
+</html>
